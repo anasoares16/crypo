@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the page content goes here.">
+    <title>CRYPO</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body id="corpo">
+    <main>
+        <header>
+            <!-- conteúdo do cabeçalho, como logo ou título -->
+            <div class="logo-container">
+                <div class="moon-logo"></div>
+                <h1 class="site-title">CRYPO</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Criar Conta</a></li>
+                    <li><a href="#">Sobre</a></li> 
+                </ul>
+            </nav>
+        </header>
+        <h2>Dados de Criptomoedas</h2>
+        <section>
+           
+            
+                <!--cripo-->
+           
+            <div id="crypto-list"></div>
+                <div class="crypto-container">
+                    <!-- <button id="prev-crypto" class="arrow">&larr;</button> -->
+                    <!-- <div id="crypto-display" class="crypto-display"></div> -->
+                    <!-- <button id="next-crypto" class="arrow">&rarr;</button> -->
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <footer>
+            <!--  conteúdo do rodapé aqui -->
+        </footer>
+    </main>
+
+    <script>
+        // URL da API
+        const apiUrl = 'https://api.coinlore.net/api/tickers/';
+
+        // Função para buscar dados da API
+        async function fetchCryptoData() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Processa e exibe os dados
+                displayCryptoData(data.data);
+            } catch (error) {
+                console.error('Erro ao buscar dados da API:', error);
+            }
+        }
+
+        // Função para exibir os dados no HTML
+        function displayCryptoData(cryptoData) {
+            const cryptoList = document.getElementById('crypto-list');
+
+            // Limpa a lista
+            cryptoList.innerHTML = '';
+
+            // Itera pelos primeiros 10 itens da lista de criptomoedas
+            cryptoData.slice(0, 10).forEach(crypto => {
+                const cryptoItem = document.createElement('div');
+                cryptoItem.className = 'crypto-item';
+                cryptoItem.innerHTML = `
+                    <h3>${crypto.name} (${crypto.symbol})</h3>
+                    <p>Preço: $${crypto.price_usd}</p>
+                    <p>Capitalização de mercado: $${crypto.market_cap_usd}</p>
+                    <p>Volume nas últimas 24h: $${crypto.volume24}</p>
+                `;
+                cryptoList.appendChild(cryptoItem);
+            });
+        }
+
+        // Chama a função para buscar os dados ao carregar a página
+        document.addEventListener('DOMContentLoaded', fetchCryptoData);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+

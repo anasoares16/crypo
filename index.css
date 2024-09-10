@@ -1,0 +1,192 @@
+h2{
+    margin:0 auto;
+    font-size: 2em;
+    text-align: center;
+    flex: 1;
+    background-color: #000000;
+    color: #fcfcfc;
+    padding: 10px ;
+    max-width: 400px;
+
+}
+
+/* Configura o main para ocupar toda a altura da página */
+main {
+    width: 100%;
+    height: 100vh; /* 100% da altura da viewport */
+    background-color: #000000;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em uma coluna */
+}
+
+/* Estiliza o cabeçalho */
+header {
+    height: 100px;
+    display: flex;
+    align-items: left;
+    justify-content: flex-end; 
+    background-color: #000000;
+    padding: 10px;
+    position: left;
+    top: 0px;
+    right: 20px;
+
+   
+}
+
+/* Estiliza o contêiner da logo */
+.logo-container {
+    display: flex;
+    align-items: left; /* Alinha  a logo e o texto */
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 10%;
+
+}
+
+/* Estiliza a logo */
+.moon-logo {
+    width: 100px;
+    height: 100px;
+    background-image: url('Design\ sem\ nome\ \(1\).png');
+    background-size: cover; /* Garante que a imagem preencha o espaço da logo */
+    border-radius: 50%;
+    float: left;
+    margin-left: 25px;
+}
+
+/* Estiliza o título do site */
+.site-title {
+    margin: 0; /* Adiciona um espaço entre a logo e o texto */
+    color: #ffffff; /* cor do texto */
+    font-size: 2em; /*  tamanho da fonte */
+    font-family: 'Jersey 10', sans-serif; /*  fonte */
+    height: 100px;
+    top: 20px; /* 20px do topo */
+    left: 20px; /*  20px da esquerda */
+    right: 90px;
+    line-height: 90px;
+    margin-left: 25px;
+}
+
+/* Estiliza a seção principal */
+section {
+    flex-grow: 1; /* Faz a seção ocupar o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Altura da viewport menos a altura do cabeçalho e do rodapé */
+    background-color: #000000;
+   
+}
+
+/* Centraliza o formulário e a área de criptomoedas */
+.form-and-api {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Estiliza o formulário */
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lform {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Estiliza o contêiner das criptomoedas */
+.crypto-container {
+    display: flex;
+    float: left;
+    width: 50%;
+    overflow: hidden; /* Esconde o conteúdo que sai do contêiner */
+    padding-left: none;
+}
+
+/* Estiliza a exibição das criptomoedas */
+.crypto-display {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fcfcfc;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out; /* Animação de transição */
+}
+
+/* Estiliza os itens de criptomoedas */
+.crypto-item {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: right;
+    width: 40%;
+    margin-left: 20px;
+}
+
+.crypto-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.crypto-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+
+
+/* Estiliza o rodapé */
+footer {
+    height: 100px;
+    background-color: #000000;
+    text-align: center; /* Centraliza o texto no rodapé */
+    color: white; /* Torna o texto no rodapé legível */
+    line-height: 100px; /* Centraliza verticalmente o texto */
+}
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+ 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+   
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
